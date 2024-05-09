@@ -46,7 +46,7 @@ function addToCart(item) {
 }
 </script>
 <template>
-    <div class=" min-h-[600px] pb-20 w-full pt-9 px-2  flex gap-8 flex-col justify-center items-center">
+    <div class=" min-h-[600px] pb-20 w-full pt-9 px-2  flex gap-8 flex-col justify-center items-center" id="products">
         <h1 class="text-[28px] font-extrabold bg-['../../assets/images/leaves.jpg']"> Our Products </h1>
         <div
             class="w-full  p-5 grid gap-4 grid-cols-4 max-sm:grid-cols-1 max-lg:grid-cols-3 max-md:grid-cols-2 place-content-center place-items-center">
