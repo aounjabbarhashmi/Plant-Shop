@@ -13,7 +13,7 @@ const array = [
         price: 80000,
     }, {
         label: 'Flower Bouquet',
-        description: 'A flower bouquet is a thoughtful arrangement of vibrant blooms, elegantly curated to convey heartfelt sentiments and bring joy to any occasion.',
+        description: 'A flower bouquet is a thoughtful arrangement of vibrant blooms, elegantly curated to convey heartfelt sentiments.',
         image: 'https://images.unsplash.com/photo-1567696153798-9111f9cd3d0d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         price: 35000,
     }
