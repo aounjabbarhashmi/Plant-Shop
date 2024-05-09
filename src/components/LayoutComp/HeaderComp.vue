@@ -1,11 +1,13 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, watchEffect } from 'vue';
 import AnimatedButton from '../CommonComp/AnimatedButton.vue';
 import { useCounterStore } from '../../stores/counter'
 const counter = useCounterStore();
 const toggleMenu = ref(false);
 const cartMenu = ref(false);
-
+watchEffect(() => {
+    counter.setProducts(JSON.parse(localStorage.getItem('data')) ? JSON.parse(localStorage.getItem('data')) : [])
+});
 function checkOut() {
     cartMenu.value = true;
     counter.setProducts(JSON.parse(localStorage.getItem('data')))

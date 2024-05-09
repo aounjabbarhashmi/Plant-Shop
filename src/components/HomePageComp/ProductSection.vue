@@ -24,13 +24,25 @@ const array = [
         price: 40000,
     }
 ]
-let data = [];
+
 import { useCounterStore } from '../../stores/counter'
 const counter = useCounterStore();
 function addToCart(item) {
-    data.push(item)
-    localStorage.setItem('data', JSON.stringify(data));
-    counter.setProducts(JSON.parse(localStorage.getItem('data')))
+
+    if (JSON.parse(localStorage.getItem('data'))) {
+        let data = JSON.parse(localStorage.getItem('data'));
+        data.push(item)
+        localStorage.setItem('data', JSON.stringify(data));
+        counter.setProducts(JSON.parse(localStorage.getItem('data')))
+    }
+    else {
+        let data = [];
+        data.push(item)
+        localStorage.setItem('data', JSON.stringify(data));
+        counter.setProducts(JSON.parse(localStorage.getItem('data')))
+    }
+
+
 }
 </script>
 <template>
