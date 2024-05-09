@@ -1,6 +1,7 @@
-import AnimatedButton from '../CommonComp/AnimatedButton.vue';
+<script setup>import AnimatedButton from '../CommonComp/AnimatedButton.vue';</script>
 <template>
     <div
+ to="#products"
         class="min-h-[600px] flex justify-center gap-2 p-2 bg-fixed items-center flex-col bg-no-repeat bg-contain bg-right-bottom bg-white  w-full image">
         <h1
             class="text-transparent   text-[70px] font-[900] text-image  bg-contain inline-block bg-clip-text">
@@ -12,7 +13,7 @@ import AnimatedButton from '../CommonComp/AnimatedButton.vue';
             silently
             composing verses of life through their graceful dance with the
             sun and soil.</p>
-        <AnimatedButton label="Buy Now!"></AnimatedButton>
+        <AnimatedButton label="Buy Now!"  to="#products"></AnimatedButton>
 
     </div>
 
