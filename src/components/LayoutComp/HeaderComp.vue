@@ -50,7 +50,7 @@ function minusItem(param) {
                 <h1 class=" font-[600] text-[28px] ">Your Cart</h1>
                 <div class="h-[70vh]  w-full gap-4 items-center justify-center  overflow-y-auto">
 
-                    <h1 class="" v-if="counter.Products.length == 0">No Item</h1>
+                    <h1 class=" flex justify-center items-center h-full" v-if="counter.Products.length == 0">No Item</h1>
                     <div class="flex my-3 w-full min-h-[150px]" v-for="item in counter.Products" :key="item">
                         <img class="w-[150px]" :src="item.image" alt="">
                         <div class="bg-white pl-6 w-full p-2">
