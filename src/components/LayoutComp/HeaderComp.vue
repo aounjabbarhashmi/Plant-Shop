@@ -37,7 +37,7 @@ function minusItem(param) {
                 <li><a href="#">contact</a></li>
             </ul>
         </nav>
-        <nav :class="!cartMenu ? ' cartOut' : 'cart shadow-lg '">
+        <nav :class="!cartMenu ? ' cartOut z-[1]' : 'cart shadow-lg z-[1] '">
             <svg xmlns="http://www.w3.org/2000/svg" v-if="cartMenu"
                 class=" w-[30px] absolute top-2 left-2 cursor-pointer" viewBox="0 0 384 512" @click="() => {
                     cartMenu = false;
@@ -48,10 +48,10 @@ function minusItem(param) {
             </svg>
             <div class="flex flex-col w-full gap-4 items-center  px-8 p-2">
                 <h1 class=" font-[600] text-[28px] ">Your Cart</h1>
-                <div class="h-[70vh] flex flex-col w-full gap-4 items-center justify-center  overflow-y-auto">
+                <div class="h-[70vh]  w-full gap-4 items-center justify-center  overflow-y-auto">
 
                     <h1 class="" v-if="counter.Products.length == 0">No Item</h1>
-                    <div class="flex w-full min-h-[150px]" v-for="item in counter.Products" :key="item">
+                    <div class="flex my-3 w-full min-h-[150px]" v-for="item in counter.Products" :key="item">
                         <img class="w-[150px]" :src="item.image" alt="">
                         <div class="bg-white pl-6 w-full p-2">
                             <h1>{{ item.label }}</h1>
@@ -120,7 +120,7 @@ function minusItem(param) {
     top: 0%;
     width: 300px;
     right: 0%;
-    z-index: 200;
+
     padding-top: 50px;
     transition: all ease-in;
     animation: slide 0.9s 1;
