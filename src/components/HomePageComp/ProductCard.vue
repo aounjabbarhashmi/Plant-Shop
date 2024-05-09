@@ -11,8 +11,9 @@
                     label: label,
                     image: image,
                     price: price,
-                    id: id
-                })
+
+                });
+                toggleNotifyHandler()
             }" class="inline-flex overflow-hidden text-white bg-[#1C1E22] rounded group">
                 <span
                     class="px-3.5 py-2 text-white bg-[#CAD4AF] group-hover:bg-[#bbcb8e] flex items-center justify-center">
@@ -46,13 +47,13 @@ defineProps({
         type: Number,
         required: true
     },
-    id: {
-        type: Number,
-        required: true
-    },
+
     addToCart: {
         type: Function,
         required: true
+    },
+toggleNotifyHandler: {
+        type: Function,
     }
 })
 

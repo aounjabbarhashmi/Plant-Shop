@@ -26,6 +26,7 @@ const array = [
 ]
 
 import { useCounterStore } from '../../stores/counter'
+import { ref } from 'vue';
 const counter = useCounterStore();
 function addToCart(item) {
 
@@ -44,14 +45,25 @@ function addToCart(item) {
 
 
 }
+const toggleNotify = ref(false);
+function toggleNotifyHandler() {
+    toggleNotify.value = true;
+    setTimeout(() => {
+        toggleNotify.value = false;
+    }, 2000)
+}
 </script>
 <template>
+    <div
+        :class="toggleNotify ? ' text-[20px] font-semibold flex justify-center items-center z-30 w-[30%] h-20 rounded-md bg-black text-white fixed top-3 left-0 transition-all ' : ' text-[20px] font-semibold flex justify-center items-center z-30 rounded-md w-full h-20 bg-black text-white fixed top-3  transition-all left-[-100%] '">
+        Added Item successfully to cart </div>
     <div class=" min-h-[600px] pb-20 w-full pt-9 px-2  flex gap-8 flex-col justify-center items-center" id="products">
         <h1 class="text-[28px] font-extrabold bg-['../../assets/images/leaves.jpg']"> Our Products </h1>
         <div
             class="w-full  p-5 grid gap-4 grid-cols-4 max-sm:grid-cols-1 max-lg:grid-cols-3 max-md:grid-cols-2 place-content-center place-items-center">
             <ProductCard v-for="item in array" :key="item.label" :image="item.image" :label="item.label"
-                :description="item.description" :price="item.price" :addToCart="addToCart" />
+                :description="item.description" :price="item.price" :addToCart="addToCart"
+                :toggleNotifyHandler="toggleNotifyHandler" />
         </div>
     </div>
 </template>

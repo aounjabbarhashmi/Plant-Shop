@@ -13,7 +13,7 @@ export const useCounterStore = defineStore('counter', () => {
     email.value = param
   }
   function setProducts(param) {
-    console.log(param, 'i am param ')
+
     Products.value = param
   }
   return { count, setEmail, email, doubleCount, increment, Products, setProducts }
